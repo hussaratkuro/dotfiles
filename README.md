@@ -45,6 +45,7 @@
 - **Code editor**
 
   - [Neovide](https://github.com/neovide/neovide)
+  - [Code - OSS](https://github.com/microsoft/vscode)
 
 - **File manager**
 
