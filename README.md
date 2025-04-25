@@ -34,7 +34,7 @@
 
 - **Browser**
 
-  - [Firefox](https://archlinux.org/packages/extra/x86_64/firefox/)
+  - [Firefox](https://archlinux.org/packages/extra/x86_64/firefox/) with [ShyFox theme](https://github.com/Naezr/ShyFox)
 
 - **Terminal**
 
