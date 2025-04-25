@@ -11,7 +11,6 @@
 
 <a href="#software"><kbd> <br> Software I use <br> </kbd></a>&ensp;&ensp;
 <a href="#workspaces"><kbd> <br> Workspaces <br> </kbd></a>&ensp;&ensp;
-<a href="#keybindings"><kbd> <br> Keybindings <br> </kbd></a>&ensp;&ensp;
 <a href="https://github.com/prasanthrangan/hyprdots"><kbd> <br> Unmodified dotfiles <br> </kbd></a>&ensp;&ensp;
 
 </div><br><br>
@@ -113,50 +112,5 @@ Workflow
 | W1      | W2       | W3     | W4           | W5         | W6   | W7        | W8      | W9     | W10   |
 | ------- | -------- | ------ | ------------ | ---------- | ---- | --------- | ------- | ------ | ----- |
 | Browser | Terminal | Editor | File Manager | Monitoring | Meld | GitKraken | Spotify | Remote |  Misc |
-
-</div>
-
-## Keybindings
-
-<div align="center">
-
-| Keys | Action |
-| :--- | :--- |
-| <kbd>Super</kbd> + <kbd>Q</kbd> | Close focused window|
-| <kbd>Super</kbd> + <kbd>W</kbd> | Toggle the window between focus and float |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd> | Toggle the window between focus and fullscreen |
-| <kbd>Super</kbd> + <kbd>L</kbd> | Launch lock screen |
-| <kbd>Super</kbd> + <kbd>Backspace</kbd> | Launch logout menu |
-| <kbd>Super</kbd> + <kbd>Return</kbd> | Launch terminal emulator (kitty) |
-| <kbd>Super</kbd> + <kbd>N</kbd> | Launch file manager (double commander) |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> | Launch file manager (thunar) |
-| <kbd>Super</kbd> + <kbd>C</kbd> | Launch text editor (vscode) |
-| <kbd>Super</kbd> + <kbd>G</kbd> | Launch web browser (firefox) |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd> | Launch web browser (chrome) |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Esc</kbd> | Launch system monitor (htop/btop or fallback to top) |
-| <kbd>Super</kbd> + <kbd>D</kbd> | Launch application launcher (rofi) |
-| <kbd>F10</kbd> | Toggle audio mute |
-| <kbd>F11</kbd> | Decrease volume |
-| <kbd>F12</kbd> | Increase volume |
-| <kbd>Super</kbd> + <kbd>P</kbd> | Partial screenshot capture |
-| <kbd>PrtScn</kbd> | All monitors screenshot capture |
-| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>G</kbd> | Disable hypr effects for gamemode |
-| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>→</kbd><kbd>←</kbd> | Cycle wallpaper |
-| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>↑</kbd><kbd>↓</kbd> | Cycle waybar mode |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> | Launch wallbash mode select menu (rofi) |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd> | Launch theme select menu (rofi) |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd> | Launch style select menu (rofi) |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | Launch wallpaper select menu (rofi) |
-| <kbd>Super</kbd> + <kbd>K</kbd> | Switch keyboard layout |
-| <kbd>Super</kbd> + <kbd>←</kbd><kbd>→</kbd><kbd>↑</kbd><kbd>↓</kbd> | Move window focus |
-| <kbd>Super</kbd> + <kbd>[0-9]</kbd> | Switch workspaces |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>←</kbd><kbd>→</kbd><kbd>↑</kbd><kbd>↓</kbd> | Resize windows |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>[0-9]</kbd> | Move focused window to a relative workspace |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>←</kbd><kbd>→</kbd><kbd>↑</kbd><kbd>↓</kbd> | Move focused window (tiled/floating) around the current workspace |
-| <kbd>Super</kbd> + <kbd>LeftClick</kbd> | Move focused window |
-| <kbd>Super</kbd> + <kbd>RightClick</kbd> | Resize focused window |
-| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd> | Move/Switch to special workspace (scratchpad) |
-| <kbd>Super</kbd> + <kbd>J</kbd> | Toggle focused window split |
-| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>[0-9]</kbd> | Move focused window to a workspace silently |
 
 </div>
