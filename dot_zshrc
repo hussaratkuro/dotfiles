@@ -1,0 +1,71 @@
+# ==========================================
+#  Aliases 
+# ==========================================
+
+alias please='sudo'
+
+# Gen-Z git aliases
+alias yoink='git clone'
+alias yank='git pull'
+alias vibes='git status'
+alias slay='git add'
+alias rizz='git commit -m'
+alias yeet='git push'
+
+# Helpful aliases
+alias  c='clear' # clear terminal
+alias  l='eza -lh  --icons=auto' # long list
+alias ls='eza -1   --icons=auto' # short list
+alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
+alias ld='eza -lhD --icons=auto' # long list dirs
+alias lt='eza --icons=auto --tree' # list folder as tree
+alias uninstall='$aurhelper -Rns' # uninstall package
+alias update='$aurhelper -Syu' # update system/package/aur
+alias plist='$aurhelper -Qs' # list installed package
+alias pavailable='$aurhelper -Ss' # list available package
+alias clearcache='$aurhelper -Sc' # remove unused cache
+alias cleanup='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
+alias vc='code' # gui code editor
+# alias vcp='sudo chown -R $(whoami) /opt/visual-studio-code' # vscode permissions
+alias btop='btop -t' # btop tty mode
+
+# Handy change dir shortcuts
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
+# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
+alias mkdir='mkdir -p'
+
+# Fixes "Error opening terminal: xterm-kitty" when using the default kitty term to open some programs through ssh
+alias ssh='kitten ssh'
+alias w-r='kitten ssh -o "IdentitiesOnly=yes" -i ~/.ssh/white-room_id_rsa morpheus@white-room'
+
+# Always use neovide instead of vim
+# alias vim='neovide'
+
+# neo-matrix transparent background
+alias matrix='neo --speed=5 -D'
+
+# Make fastfetch clear the terminal
+alias fetch='clear && fastfetch'
+
+# VNC server
+alias wayvnc='wayvnc -grD --config $HOME/.config/wayvnc/config'
+
+# ==========================================
+#  Sources 
+# ==========================================
+
+# FZF
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+
+# ==========================================
+#  Env vars 
+# ==========================================
+
+export PATH=$PATH:$HOME/.spicetify
+export PATH=$PATH:$HOME/go/bin
