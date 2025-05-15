@@ -20,9 +20,10 @@
         "exec-if": "which dunstctl",
         "exec": "notifications.py",
         "on-scroll-down": "sleep 0.1 && dunstctl history-pop",
-        "on-click": "dunstctl set-paused toggle",
+        "on-click": "notifications.py --panel",
         "on-click-middle": "dunstctl history-clear",
-        "on-click-right": "dunstctl close-all",
+        // "on-click-right": "dunstctl close-all",
+        "on-click-right": "dunstctl set-paused toggle",
         "interval": 1,
         "tooltip": true,
         "escape": true

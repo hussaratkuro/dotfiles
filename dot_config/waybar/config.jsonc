@@ -18,7 +18,7 @@
 
 	"modules-left": ["custom/padd","custom/l_end","cpu","memory","custom/cpuinfo","custom/r_end","custom/l_end","custom/updates","backlight","pulseaudio","pulseaudio#microphone","custom/spotify","custom/r_end","custom/padd"],
 	"modules-center": ["custom/padd","custom/l_end","hyprland/workspaces","hyprland/window","custom/r_end","custom/padd"],
-	"modules-right": ["custom/padd","custom/l_end","idle_inhibitor","clock","custom/r_end","custom/l_end","network","privacy","tray","battery","custom/r_end","custom/l_end","custom/wallchange","custom/theme","custom/wbar","custom/cliphist","custom/power","custom/r_end","custom/padd"],
+	"modules-right": ["custom/padd","custom/l_end","custom/notifications","custom/r_end","custom/l_end","idle_inhibitor","clock","custom/r_end","custom/l_end","network","privacy","tray","battery","custom/r_end","custom/l_end","custom/wallchange","custom/theme","custom/wbar","custom/cliphist","custom/power","custom/r_end","custom/padd"],
 
 
 // sourced from modules based on config.ctl //
@@ -158,6 +158,36 @@
         "max-length": 50
     },
 
+    "custom/notifications": {
+      // "format": "{icon} {}",
+        "format": "{} {icon}", // TODO: workaround for the module not showing up // revert when fixed
+        "rotate": 0,
+        "format-icons": {
+            "email-notification": "<span foreground='white'><sup></sup></span>",
+            "chat-notification": "󱋊<span foreground='white'><sup></sup></span>",
+            "warning-notification": "󱨪<span foreground='yellow'><sup></sup></span>",
+            "error-notification": "󱨪<span foreground='red'><sup></sup></span>",
+            "network-notification": "󱂇<span foreground='white'><sup></sup></span>",
+            "battery-notification": "󰁺<span foreground='white'><sup></sup></span>",
+            "update-notification": "󰚰<span foreground='white'><sup></sup></span>",
+            "music-notification": "󰝚<span foreground='white'><sup></sup></span>",
+            "volume-notification": "󰕿<span foreground='white'><sup></sup></span>",
+            "notification": "<span foreground='white'><sup></sup></span>",
+            "dnd": "",
+            "none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which dunstctl",
+        "exec": "notifications.py",
+        "on-scroll-down": "sleep 0.1 && dunstctl history-pop",
+        "on-click": "notifications.py --panel",
+        "on-click-middle": "dunstctl history-clear",
+        // "on-click-right": "dunstctl close-all",
+        "on-click-right": "dunstctl set-paused toggle",
+        "interval": 1,
+        "tooltip": true,
+        "escape": true
+    },
     "idle_inhibitor": {
         "format": "{icon}",
         "rotate": 0,
