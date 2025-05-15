@@ -4,7 +4,7 @@ import json
 import sys
 import os
 
-FALLBACK_ICON = os.path.expanduser("~/.local/share/icons/Tela-circle-dracula/scalable/status/notification-bell.svg")
+FALLBACK_ICON = os.path.expanduser("~/.local/share/icons/Tela-circle-dracula/scalable/apps/notification-bell.svg")
 
 def get_dunst_history():
     result = subprocess.run(['dunstctl', 'history'], stdout=subprocess.PIPE, check=True)
@@ -25,10 +25,10 @@ def format_waybar_output(history, dnd_active):
 
     tooltip_click = [
         "󰎟 Notifications",
-        "󰳽 scroll-down:  history pop",
+        "󰳽 scroll-down:  history pop",
         "󰳽 click-left: 󱇧 Open panel",
         "󰳽 click-middle: 󰛌 clear history",
-        "󰳽 click-right: 󱄊 close all"
+        "󰳽 click-right:  Enable & Disable DND"
     ]
 
     tooltip_notifications = []
@@ -92,7 +92,7 @@ def find_icon_path(app_name):
                             if os.path.exists(icon_path):
                                 return icon_path
 
-    return FALLBACK_ICON  # <-- Always fallback here
+    return FALLBACK_ICON
 
 def show_rofi_panel(history):
     rofi_entries = []
