@@ -106,11 +106,13 @@ def show_rofi_panel(history):
             icon_cache[app_name] = find_icon_path(app_name)
 
         icon = icon_cache[app_name]
-        entry = f"{body}\0icon\x1f{icon}"
+        padded_body = " " + body
+
+        entry = f"{padded_body}\0icon\x1f{icon}"
         rofi_entries.append(entry)
 
     if not rofi_entries:
-        entry = f"No notifications\0icon\x1f{FALLBACK_ICON}"
+        entry = f" No notifications\0icon\x1f{FALLBACK_ICON}"
         rofi_entries = [entry]
 
     rofi_input = '\n'.join(rofi_entries)
@@ -129,6 +131,7 @@ def show_rofi_panel(history):
         )
     except Exception as e:
         print(f"Failed to open rofi: {e}", file=sys.stderr)
+
 
 def main():
     if len(sys.argv) > 1 and sys.argv[1] == "--panel":
