@@ -8,7 +8,7 @@ configuration {
 
 window {
     width: 30em;
-    height: 30em;
+    height: 28em;
     transparency: "real";
     fullscreen: false;
     enabled: true;
@@ -75,7 +75,7 @@ listview {
     enabled: true;
     padding: 0.5em;
     columns: 1;
-    lines: 11;
+    lines: 10;
     cycle: true;
     fixed-height: true;
     fixed-columns: false;
