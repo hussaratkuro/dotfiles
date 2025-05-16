@@ -34,7 +34,13 @@ def format_waybar_output(history, dnd_active):
     tooltip_notifications = []
     for notif in history['data'][0][:10]:
         body = notif.get('body', {}).get('data', '').strip()
-        tooltip_notifications.append(f" {body}")
+        app_name = notif.get('appname', {}).get('data', '').strip()
+        summary = notif.get('summary', {}).get('data', '').strip()
+
+        if app_name.lower() == "vesktop" and summary:
+            tooltip_notifications.append(f"{summary}: {body}")
+        else:
+            tooltip_notifications.append(f" {body}")
 
     return {
         "text": str(count),
@@ -55,6 +61,7 @@ def find_icon_path(app_name):
 
     icon_map = {
         "discord": ["discord", "Discord"],
+        "vesktop": ["discord", "Vesktop", "Discord"],
         "instagram": ["instagram", "Instagram"],
         "mattermost": ["mattermost", "Mattermost"],
         "messenger": ["messenger", "Messenger"],
@@ -101,18 +108,23 @@ def show_rofi_panel(history):
     for notif in history['data'][0]:
         body = notif.get('body', {}).get('data', '').strip()
         app_name = notif.get('appname', {}).get('data', '').strip()
+        summary = notif.get('summary', {}).get('data', '').strip()
 
         if app_name not in icon_cache:
             icon_cache[app_name] = find_icon_path(app_name)
 
         icon = icon_cache[app_name]
-        padded_body = " " + body
+
+        if app_name.lower() == "vesktop" and summary:
+            padded_body = f" {summary}: {body}"
+        else:
+            padded_body = " " + body
 
         entry = f"{padded_body}\0icon\x1f{icon}"
         rofi_entries.append(entry)
 
     if not rofi_entries:
-        entry = f" No notifications\0icon\x1f{FALLBACK_ICON}"
+        entry = f" No notifications\0icon\x1f{FALLBACK_ICON}"
         rofi_entries = [entry]
 
     rofi_input = '\n'.join(rofi_entries)
@@ -131,7 +143,6 @@ def show_rofi_panel(history):
         )
     except Exception as e:
         print(f"Failed to open rofi: {e}", file=sys.stderr)
-
 
 def main():
     if len(sys.argv) > 1 and sys.argv[1] == "--panel":
